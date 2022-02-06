@@ -33,3 +33,12 @@ AND gender = 2
 -- 女性指定忘れてた
 ORDER BY birthday ASC
 LIMIT 3
+
+-005
+SELECT *
+FROM sample.customers
+WHERE prefecture NOT IN ('東京','千葉','埼玉','神奈川')
+-- 以外の書き方ミス
+AND id_premium IS TRUE
+ORDER BY birthday DESC
+LIMIT 3
