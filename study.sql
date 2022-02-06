@@ -14,3 +14,10 @@ SELECT order_id
 FROM sample.sales
 ORDER BY new_revenue DESC
 LIMIT 3
+-- 003
+SELECT *
+FROM sample.customers
+WHERE birthday IS NOT NULL
+AND id_premium = TRUE
+ORDER BY birthday DESC, register_date ASC
+LIMIT 3
